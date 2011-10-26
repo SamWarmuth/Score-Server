@@ -10,6 +10,7 @@ end
 
 require "monk/glue"
 require "couchrest"
+require "couchrest_model"
 require "haml"
 require "sass"
 require "json"
@@ -21,7 +22,6 @@ end
 
 # Connect to couchdb.
 couchdb_url = monk_settings(:couchdb)[:url]
-COUCHDB_SERVER = CouchRest.database!(couchdb_url)
 
 
 # Load all application files.
